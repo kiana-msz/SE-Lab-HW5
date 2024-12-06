@@ -20,7 +20,7 @@ public class PrimeChecker {
 
     public static boolean isPrime(int n) {
         if (n < 2) return false;
-        for (int i = 2; i < n; i++) { // Inefficient loop
+        for (int i = 2; i <= Math.sqrt(n); i++) { // Only iterate up to the square root of n
             if (n % i == 0) return false;
         }
         return true;
